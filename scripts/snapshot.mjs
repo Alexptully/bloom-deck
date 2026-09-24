@@ -39,7 +39,8 @@ for (let s = 0; s < steps.length; s++) {
 
 await page.emulateMedia({ media: "print" });
   await page.goto("http://localhost:4173/print/");
-await page.waitForTimeout(1500);
+await page.waitForFunction(() => [...document.images].every((i) => i.complete && i.naturalWidth > 0), null, { timeout: 20000 });
+await page.waitForTimeout(500);
 await page.pdf({ path: join(outDir, "deck.pdf"), width: "1920px", height: "1080px", printBackground: true, margin: { top: 0, right: 0, bottom: 0, left: 0 } });
 await browser.close();
 server.close();
