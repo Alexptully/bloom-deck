@@ -5,6 +5,7 @@ import { TitleSlide } from "./slides/TitleSlide";
 import { ProblemSlide } from "./slides/ProblemSlide";
 import { GardenSlide } from "./slides/GardenSlide";
 import { IdeaSlide } from "./slides/IdeaSlide";
+import { ForestSlide } from "./slides/ForestSlide";
 import { HowSlide } from "./slides/HowSlide";
 import { PrivacySlide } from "./slides/PrivacySlide";
 import { JourneySlide } from "./slides/JourneySlide";
@@ -34,6 +35,7 @@ export const slides: SlideEntry[] = [
   { name: "The problem", section: "Concept and story", steps: 3, sources: ["amberDeck"], notes: content.problem.notes, Content: ProblemSlide },
   { name: "Terra's Garden", section: "Concept and story", steps: 5, sources: ["gardenDeck"], notes: content.garden.notes, Content: GardenSlide },
   { name: "The idea", section: "Concept and story", steps: 3, notes: content.idea.notes, Content: IdeaSlide },
+  { name: "In the Magical Forest", section: "Concept and story", steps: 3, printSteps: [1, 3], sources: ["gardenDeck"], notes: content.forest.notes, Content: ForestSlide },
   { name: "How it works", section: "How it works", steps: 5, sources: ["espressif"], notes: content.how.notes, Content: HowSlide },
   { name: "Privacy", section: "Risks and privacy", steps: 5, notes: content.privacy.notes, Content: PrivacySlide },
   { name: "One guest's night", section: "Concept and story", steps: 4, sources: ["gardenDeck"], notes: content.journey.notes, Content: JourneySlide },

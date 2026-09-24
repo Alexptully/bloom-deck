@@ -13,11 +13,11 @@ export const content = {
   title: {
     name: config.projectName,
     tagline: "A bracelet that lights up when two people truly meet",
-    byline: `${config.presenter}, ${config.club}, Fall 2026`,
+    byline: `${config.presenter}, ${config.club}, for the Magical Forest demo`,
     notes: [
       "Open with the bracelet dark on your wrist. Say your name, have a teammate say theirs, and let one light come on as the title animates. If the prototype is not ready, the title animation does the same job.",
       "Set up the one distinction the whole deck relies on. On the wrist, Bloom is a ring of eight lights, and each new person you meet turns one more on. On the Garden site and the projected wall, those same meetings grow a flower. Eight lights on the wrist is a flower in full bloom on the wall.",
-      "One sentence framing: at the hackathon we built a garden that grew when people met. This is the version where nobody has to touch a phone for the garden to notice.",
+      "One sentence framing: at the hackathon we built a garden that grew when people met. For the Magical Forest demo, this is the version where nobody touches a phone and the forest itself notices when two people meet.",
     ],
   },
 
@@ -28,7 +28,7 @@ export const content = {
     rate: "20 to 40 new connections a month for students, founders and community builders",
     notes: [
       "The Amber team measured this for their own product: four out of five new contacts go quiet, and the details that made them worth knowing are gone within two days. A club demo night is exactly this problem in miniature. You meet thirty people and remember four.",
-      "The fix most people reach for is a phone: a LinkedIn scan, a contact card, a note. The phone is the thing that ends the conversation.",
+      "The fix most people reach for is a phone: a LinkedIn scan, a contact card, a note. The phone is the thing that ends the conversation, and in a room dressed as a magical forest it also breaks the spell the set is trying to cast.",
     ],
   },
 
@@ -49,14 +49,28 @@ export const content = {
   },
 
   idea: {
-    heading: "The bracelet listens for one thing",
+    heading: "The forest listens for one thing",
     line1: "Two people tell each other their names.",
     line2: "Only then does one more light come on, on both wrists.",
     afterward: "On the Garden site your flower grows, and everyone you met is saved for the next morning.",
     notes: [
-      "This is the whole idea. A microphone on the bracelet listens for an introduction and nothing else. When you say your name and the person across from you says theirs, one more of the eight lights on each bracelet comes on, and both of your flowers grow a stage on the wall and the Garden site.",
+      "This is the whole idea, and it is the story we want the forest to tell: the forest is listening, but only for your name. In practice, a microphone on the bracelet listens for an introduction and nothing else. When you say your name and the person across from you says theirs, one more of the eight lights on each bracelet comes on, and both of your flowers grow a stage on the wall and the Garden site.",
       "The bracelet itself never shows a flower. It is a band with eight LEDs: meet one person and one light is on, meet eight and the ring is full, which is full bloom. The flower is how the site and the wall draw the same progress.",
       "The next morning you open the Garden site and every person you lit a light with is there, with a face, a name and the one fun fact they gave at check-in. Not a stack of cards, the people you actually talked to.",
+    ],
+  },
+
+  forest: {
+    heading: "Bloom in the Magical Forest",
+    entrance: { label: "The planting station", detail: "Guests check in and are given a dark bracelet, a seed" },
+    wander: { label: "The forest floor", detail: "Every introduction lights one more LED on two wrists" },
+    clearing: { label: "The clearing", detail: "The projected garden, one flower per guest" },
+    caption: "From across the room, the lit bracelets drift through the trees like fireflies.",
+    notes: [
+      "This is where Bloom sits in the Magical Forest demo. The door is the edge of the forest. Just inside it is a planting station, our check-in table dressed with soil tones and dormant bracelets, where each guest is planted as a seed and handed a bracelet with eight dark lights.",
+      "Guests then wander the forest floor, which is the rest of the room. Every time two of them swap names, a light comes on at each wrist. After an hour, the room is full of small moving lights at wrist height, which is the firefly effect we want the narrative team to lean into with lighting and set dressing.",
+      "At the far end is the clearing: the projected garden wall. It starts as an empty glade and grows one flower per guest, each flower a stage further along every time its owner lights another LED. Guests walk to the clearing to find their own flower, which gives the room a natural gathering point.",
+      "Everything here is a proposal for the narrative team to shape. The planting station, the firefly lighting and the clearing are the three places where Bloom touches the set.",
     ],
   },
 
@@ -79,7 +93,7 @@ export const content = {
   },
 
   privacy: {
-    heading: "A device that listens has to earn it",
+    heading: "A forest that listens has to earn trust",
     rules: [
       { label: "Consent at check-in", detail: "You choose to wear it, and you can opt out of saving anything" },
       { label: "A visible indicator", detail: "The lights breathe softly while the microphone is live" },
@@ -90,16 +104,16 @@ export const content = {
     notes: [
       "This is the slide the room will be waiting for, so say it before anyone asks. The bracelet is opt-in, it shows when it is listening, you can silence it with your thumb, and nothing it hears is kept. The server stores who met whom and when, nothing else, and anyone can ask us to delete their night.",
       "The button fallback matters for the story too. If the room is too loud, or someone would rather not be heard at all, two people pressing together still counts as meeting. Nobody leaves with a dark bracelet.",
-      "We want the narrative team's help making this feel like the forest listening for your name, which is welcoming, rather than a device recording a party, which is not.",
+      "This is where the Magical Forest story does real work. Framed as the forest listening for your name, the microphone is part of the world, and the consent card at the planting station can be written in that voice. We want the narrative team's help making it feel welcoming rather than like a device recording a party.",
     ],
   },
 
   journey: {
-    heading: "One guest's night",
+    heading: "One guest's night in the forest",
     beats: [
-      { time: "7:00", label: "Planted", detail: "Name, photo, one fun fact. A bracelet with eight dark lights goes on your wrist." },
+      { time: "7:00", label: "Planted", detail: "At the planting station: name, photo, one fun fact, and a bracelet with eight dark lights." },
       { time: "7:12", label: "First light", detail: "You and Maya swap names. A light comes on at each wrist, and two seeds sprout on the wall." },
-      { time: "8:30", label: "The garden fills", detail: "Eight people met means all eight lights on and a flower in full bloom." },
+      { time: "8:30", label: "The clearing fills", detail: "Eight people met means all eight lights on and a flower in full bloom." },
       { time: "Next morning", label: "Everyone you met", detail: "The Garden site lists each person, with their face and fun fact." },
     ],
     notes: [
@@ -146,7 +160,7 @@ export const content = {
   },
 
   timeline: {
-    heading: `${plan.weeks} weeks to demo day`,
+    heading: `${plan.weeks} weeks to the Magical Forest`,
     mvp: config.mvpDate,
     demo: config.demoDate,
     weeks: [
@@ -177,7 +191,7 @@ export const content = {
     notes: [
       "Seven roles, and the plan works with as few as four people if some double up: PM with industrial design, hardware with firmware, backend with web, narrative with projection visuals.",
       "About eight and a half hours a week each, which is one team sync, one shared build block and a few hours of solo work. Three crunch weeks run higher: the MVP, the assembly party and demo week.",
-      "The narrative role is a real seat at the table, not a favour we ask at the end. Species, palette, signage, the consent copy and the run of show all sit with that person and the Terra Labs narrative team.",
+      "The narrative role is a real seat at the table, not a favour we ask at the end. That person owns how Bloom lives inside the Magical Forest: the planting station, the firefly lighting on the forest floor, the clearing, the flower species, the consent copy in the forest's voice, and the run of show with the Terra Labs narrative team.",
     ],
   },
 
@@ -201,12 +215,12 @@ export const content = {
     asks: [
       { label: "A team", detail: "Five to seven people, about 8 hours a week" },
       { label: "A budget tier", detail: "Lean at $944 or Mid at $2,197" },
-      { label: "A narrative partner", detail: "To make the forest listen kindly" },
-      { label: "A wall", detail: "One projection surface and a check-in table by the door" },
+      { label: "A narrative partner", detail: "To shape the planting station, the fireflies and the clearing" },
+      { label: "A place in the forest", detail: "A planting station by the entrance and one wall for the clearing" },
     ],
     close: "Let the forest bloom when people meet.",
     notes: [
-      "End on the garden. As you list the asks, the wall behind you fills with flowers. The name Bloom is a placeholder, and we would love the narrative team to name it.",
+      "End on the garden. As you list the asks, the clearing on screen fills with flowers. The ask is really for a place in the Magical Forest: a spot by the door for the planting station and a wall for the clearing. The name Bloom is a placeholder, and we would love the narrative team to name it.",
       "Take questions on privacy first if they come; the answer is on the earlier slide and in the PRD.",
     ],
   },

@@ -42,6 +42,10 @@ No other numbers go on slides. Anything estimated is labelled "team estimate".
 
 The phone screens in `public/renders/garden-*.png` are crops of the real Terra's Garden website taken from the hackathon demo recording (check-in form, seed, connection card, budding, full bloom). `garden-empty.jpg` and `garden-full.jpg` are the projected garden illustration from the same deck. They are our own material and may be used on any slide.
 
+## Magical Forest framing
+
+Every slide should read as part of the Magical Forest demo. The door of the demo room is the edge of the forest. The check-in table is the planting station, where each guest is planted as a seed and given a dark bracelet. The room is the forest floor, where lit bracelets move at wrist height like fireflies. The projection wall is the clearing, where the garden fills with one flower per guest. The forest "listens for your name" is the story framing of the microphone, always given alongside the plain explanation. A treeline along the foot of every slide grows denser as the deck goes on.
+
 ## Motif
 
 Eight, drawn two ways. On the wrist, Bloom is a ring of eight LEDs, and each new person you meet lights one more; all eight lit is full bloom. On the Garden site and the projected wall, the same meetings grow a flower from seed to full bloom. Slides about the physical bracelet draw the light ring (`LightRing`); slides about the site, the wall and the story draw the flower (`Bloom`). Never show a flower on the wrist.

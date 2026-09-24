@@ -6,6 +6,7 @@ import { usePresenterKeys, useStageScale } from "./usePresenterKeys";
 import { SlideFooter } from "./SlideFooter";
 import { NotesPanel } from "./NotesPanel";
 import { Grain } from "./Grain";
+import { ForestEdge } from "./ForestEdge";
 import { ease, durations } from "@/lib/timing";
 
 const stepCounts = slides.map((s) => s.steps);
@@ -25,6 +26,7 @@ export function Deck() {
       onTouchEnd={onTouchEnd}
     >
       <div className="stage shrink-0" style={{ transform: `scale(${scale})`, transformOrigin: "center" }} aria-live="polite">
+        <ForestEdge growth={pos.slide / (slides.length - 1)} />
         <AnimatePresence mode="wait">
           <motion.section
             key={pos.slide}
