@@ -19,8 +19,7 @@ export const content = {
     tagline: "A bracelet that lights up when two people meet",
     byline: `${config.presenter}, ${config.club}`,
     notes: [
-      "About 15 seconds. I'm Alex. This is Bloom, a bracelet for the Magical Forest that lights up when two people actually meet.",
-      "If the prototype is ready, wear it dark, swap names with a teammate and let one light come on while the title builds.",
+      "About 5 seconds. I'm Alex, and this is Bloom, a bracelet for the Magical Forest that lights up when two people actually meet.",
     ],
   },
 
@@ -33,8 +32,7 @@ export const content = {
     sprouted: 9,
     events: { value: "89%", label: "of 18 to 35 year-olds want events that connect them to their community" },
     notes: [
-      "About 25 seconds. Researchers asked Chicago commuters to talk to a stranger. They guessed fewer than half would want to, and of everyone who reported back, nobody was turned down. The ones who talked had a happier ride.",
-      "And people want that from events: 89 percent of 18 to 35 year-olds want events that connect them to their community. Bloom gives everyone a reason to start that first conversation.",
+      "About 15 seconds. When researchers asked commuters to talk to a stranger, they guessed fewer than half would want to. Nobody turned them down. And 89 percent of young adults want events that connect them to people.",
     ],
   },
 
@@ -49,8 +47,7 @@ export const content = {
     ],
     broken: "Pulling out a phone breaks the moment",
     notes: [
-      "About 30 seconds. At the hackathon we built Terra's Garden in five hours. You check in and get planted as a seed, someone taps your bracelet with their phone, your bracelet glows brighter, and your flower joins a projected garden.",
-      "It worked, except for one step. Tapping meant pulling out a phone, and the moment you both look down, the conversation is over.",
+      "About 15 seconds. At the hackathon we built Terra's Garden: tap bracelets and your flower grows on a projected garden. It worked, except tapping meant pulling out a phone, and that ends the conversation.",
     ],
   },
 
@@ -60,8 +57,7 @@ export const content = {
     line2: "Only then does one more light come on, on both wrists.",
     afterward: "On the Garden site your flower grows, and everyone you met is saved for the next morning.",
     notes: [
-      "About 25 seconds. So for the Magical Forest, the forest does the noticing. It listens for one thing: two people telling each other their names.",
-      "Only then does one more light come on, on both wrists at the same time. On the Garden site your flower grows, and everyone you met is saved for the next morning.",
+      "About 15 seconds. So the forest listens for one thing: two people telling each other their names. Then one more light comes on, on both wrists, and the next morning everyone you met is on the Garden site.",
     ],
   },
 
@@ -72,7 +68,7 @@ export const content = {
     clearing: { label: "The clearing", detail: "The projected garden, one flower per guest" },
     caption: "From across the room, the lit bracelets drift through the trees like fireflies.",
     notes: [
-      "About 25 seconds. By the door is the planting station, where guests check in and get a dark bracelet, their seed. Out on the forest floor, every introduction lights one more LED on two wrists, so the bracelets glow like fireflies. At the far end, the clearing on the wall grows one flower per guest.",
+      "About 15 seconds. You get a dark bracelet at the planting station, the lit bracelets drift through the room like fireflies, and the clearing on the wall grows a flower for every guest.",
     ],
   },
 
@@ -86,6 +82,7 @@ export const content = {
       { id: "bloom", label: "One more light" },
     ],
     notes: [
+      "Backup slide for questions. Not part of the 2 minute talk.",
       "About 30 seconds. Bracelets notice when another one is within arm's reach, and only then does the mic stream to our laptop over campus Wi-Fi.",
       "Amber, a relationship-memory app that already turns speech into people, checks for names on the guest list. When each person hears the other's name, both bracelets light up and the meeting is saved. We build the bracelet and the garden, not the AI.",
     ],
@@ -95,6 +92,7 @@ export const content = {
     heading: "A listening forest has to earn trust",
     rules: ["Opt in at check-in", "Lights show when it listens", "Hold to mute", "No audio saved", "Press together as a backup"],
     notes: [
+      "Backup slide for questions. Not part of the 2 minute talk.",
       "About 20 seconds. You choose to wear it, the lights breathe while it's listening, and holding the button mutes it. No audio is ever saved, only who met whom.",
       "If the room is too loud, two people pressing their buttons together still counts.",
     ],
@@ -115,6 +113,7 @@ export const content = {
       { name: "Mid", bracelets: bomMid.bracelets, total: bomMid.total, each: perBracelet(bomMid) },
     ],
     notes: [
+      "Backup slide for questions. Not part of the 2 minute talk.",
       "About 25 seconds. It's an ESP32, a mic, eight LEDs, a battery and one button in a printed band, all parts we can buy today.",
       "Lean is 32 bracelets for $944. Mid is 66 bracelets on a custom board for $2,197. There's no router and no extra PC: campus Wi-Fi and a laptop we already own.",
     ],
@@ -137,6 +136,7 @@ export const content = {
       { week: 10, label: "Demo day" },
     ],
     notes: [
+      "Backup slide for questions. Not part of the 2 minute talk.",
       "About 20 seconds. Week one proves name detection in a loud room before we buy anything. The MVP is four working bracelets by October 30. Then we build the rest, rehearse with twenty members, and keep Thanksgiving week as a buffer.",
     ],
   },
@@ -152,8 +152,7 @@ export const content = {
       { label: "Solo work", detail: "The rest on your own schedule" },
     ],
     notes: [
-      "About 20 seconds. With five people, each of us averages about ten hours a week: one team sync, one build block together, the rest on your own time.",
-      "The MVP, assembly and demo weeks run heavier, up to about 18 hours in demo week, and Thanksgiving week is light.",
+      "About 15 seconds. It's about ten hours a week each over ten weeks: one team sync, one build block together, the rest on your own. MVP, assembly and demo weeks run heavier.",
     ],
   },
 
@@ -169,8 +168,7 @@ export const content = {
     ],
     doubleUp: "Nobody needs every skill. You pick the seat that fits and learn the rest with the team.",
     notes: [
-      "About 25 seconds. Five seats, each with something clear to own. You don't need to have done it before: the middle column is what helps, and the right column is what you'll walk away knowing.",
-      "The narrative seat is a real role from week one. That person shapes how Bloom lives inside the Magical Forest.",
+      "About 20 seconds. We need five people, each owning one piece: systems, hardware and firmware, software, industrial design and narrative. You don't need experience in all of it. The middle column is what helps, the right column is what you'll learn.",
     ],
   },
 
@@ -184,6 +182,7 @@ export const content = {
     ],
     close: "Let the forest bloom when people meet.",
     notes: [
+      "Backup slide for questions. Not part of the 2 minute talk.",
       "About 15 seconds. We're asking for five people, one of the two budgets, a narrative partner and a spot in the forest: the door and one wall.",
       "Close: let the forest bloom when people meet.",
     ],
@@ -194,7 +193,7 @@ export const content = {
     line: "Any questions?",
     byline: `${config.presenter}, ${config.club}`,
     notes: [
-      "About 10 seconds. Thank you. Any questions?",
+      "About 5 seconds. Thank you. Any questions?",
     ],
   },
 } as const;

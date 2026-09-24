@@ -1,6 +1,6 @@
 # Bloom deck brief
 
-Pitch deck for Terra Labs (USC) Fall 2026 project selection. Presenter: Alex Tully. Audience: Terra Labs leads and the narrative design team choosing projects for the end-of-year Magical Forest demo. Length: 2 to 5 minutes live (about 3.5 minutes as scripted), nine slides plus a sources page. Slide text is labels only; the spoken script lives in each slide's speaker notes with a time for each.
+Pitch deck for Terra Labs (USC) Fall 2026 project selection. Presenter: Alex Tully. Audience: Terra Labs leads and the narrative design team choosing projects for the end-of-year Magical Forest demo. Length: 2 minutes live (about 230 spoken words across eight slides, title to thank you). How it works, privacy, hardware and BOM, the timeline and the ask follow the thank you slide as backup for questions, so every Terra Labs section is still in the deck.
 
 ## What it pitches
 
