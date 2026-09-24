@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@import "@fontsource-variable/fraunces/opsz.css";
+@import "@fontsource-variable/source-sans-3";
+
+@theme {
+  --color-paper: #f3eddd;
+  --color-paper-raised: #fbf7ec;
+  --color-paper-deep: #e6dec8;
+  --color-ink: #1e2a1e;
+  --color-ink-muted: #5f6b5b;
+  --color-accent: #e39b2e;
+  --color-accent-soft: #f6d9a3;
+  --color-leaf: #3f6b3f;
+  --color-leaf-soft: #8fae84;
+  --color-muted: #b8bdb0;
+  --color-danger: #b5533c;
+
+  --font-display: "Fraunces Variable", Georgia, serif;
+  --font-body: "Source Sans 3 Variable", system-ui, sans-serif;
+
+  --text-display: 168px;
+  --text-display--line-height: 0.95;
+  --text-hero: 104px;
+  --text-hero--line-height: 1;
+
+  --radius-card: 24px;
+  --shadow-card: 0 18px 40px -22px rgb(30 42 30 / 0.35);
+  --ease-bloom: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html, body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  margin: 0;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 60, "WONK" 0;
+}
+
+.stage {
+  width: 1920px;
+  height: 1080px;
+  position: relative;
+  overflow: hidden;
+  background: var(--color-paper);
+}
+
+.grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.16;
+  mix-blend-mode: multiply;
+}
+
+@media print {
+  @page { size: 1920px 1080px; margin: 0; }
+  html, body { background: white; }
+  .print-page { width: 1920px; height: 1080px; page-break-after: always; overflow: hidden; }
+  .no-print, .grain { display: none !important; }
+}
