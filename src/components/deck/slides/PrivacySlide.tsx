@@ -17,14 +17,11 @@ export function PrivacySlide({ step }: SlideProps) {
   return (
     <Frame className="flex flex-col">
       <Heading>{p.heading}</Heading>
-      <ul className="mt-14 flex flex-1 flex-col justify-start gap-3">
+      <ul className="mt-10 flex flex-1 flex-col justify-center gap-4">
         {p.rules.map((r, i) => (
-          <Reveal key={r.label} show={step >= i + 1} className="flex items-center gap-10">
-            <LightRing {...marks[i]} size={110} />
-            <div className="flex flex-1 items-baseline gap-8">
-              <p className="w-[520px] text-4xl">{r.label}</p>
-              <p className="text-2xl text-ink-muted">{r.detail}</p>
-            </div>
+          <Reveal key={r} show={step >= i + 1} className="flex items-center gap-10">
+            <LightRing {...marks[i]} size={104} />
+            <p className="text-4xl">{r}</p>
           </Reveal>
         ))}
       </ul>

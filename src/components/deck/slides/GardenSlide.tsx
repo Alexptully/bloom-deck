@@ -21,9 +21,8 @@ export function GardenSlide({ step }: SlideProps) {
           {g.steps.map((s, i) => {
             const danger = broken && i === 1;
             return (
-              <Reveal key={s.label} show={step >= i + 1} className={`rounded-card px-8 py-5 ${danger ? "bg-danger text-paper" : ""}`}>
-                <p className="text-4xl">{s.label}</p>
-                <p className={`mt-1 text-2xl leading-snug ${danger ? "text-paper" : "text-ink-muted"}`}>{s.detail}</p>
+              <Reveal key={s} show={step >= i + 1} className={`rounded-card px-8 py-5 ${danger ? "bg-danger text-paper" : ""}`}>
+                <p className="text-4xl">{s}</p>
               </Reveal>
             );
           })}

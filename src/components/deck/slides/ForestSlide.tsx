@@ -100,19 +100,13 @@ export function ForestSlide({ step }: SlideProps) {
         </svg>
         <div className="flex flex-1 flex-col justify-center gap-10">
           <Reveal show={step >= 1}>
-            <p className="text-4xl">{f.entrance.label}</p>
-            <p className="mt-2 text-2xl leading-snug text-ink-muted">{f.entrance.detail}</p>
+            <p className="text-4xl leading-tight">{f.entrance}</p>
           </Reveal>
           <Reveal show={step >= 2}>
-            <p className="text-4xl">{f.wander.label}</p>
-            <p className="mt-2 text-2xl leading-snug text-ink-muted">{f.wander.detail}</p>
+            <p className="text-4xl leading-tight">{f.wander}</p>
           </Reveal>
           <Reveal show={step >= 3}>
-            <p className="text-4xl">{f.clearing.label}</p>
-            <p className="mt-2 text-2xl leading-snug text-ink-muted">{f.clearing.detail}</p>
-          </Reveal>
-          <Reveal show={step >= 3}>
-            <p className="text-2xl text-accent">{f.caption}</p>
+            <p className="text-4xl leading-tight">{f.clearing}</p>
           </Reveal>
         </div>
       </div>

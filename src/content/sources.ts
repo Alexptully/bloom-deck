@@ -1,9 +1,4 @@
 export const sources = {
-  amberDeck: {
-    cite: "Amber Intelligence deck, 2026",
-    title: "Amber Intelligence investor deck, slides 'Your network has a churn problem' and 'Our Product'",
-    url: "",
-  },
   hall: {
     cite: "Hall, Journal of Social and Personal Relationships, 2019",
     title: "How many hours does it take to make a friend? (Study 2: 112 University of Kansas freshmen, first nine weeks)",
@@ -29,20 +24,10 @@ export const sources = {
     title: "Adafruit Lithium Ion Polymer Battery 3.7 V 500 mAh, product 1578",
     url: "https://www.adafruit.com/product/1578",
   },
-  deepgram: {
-    cite: "deepgram.com/pricing, checked Sep 22 2026",
-    title: "Deepgram pricing, Nova-3 streaming pay as you go",
-    url: "https://deepgram.com/pricing",
-  },
   taskSheet: {
     cite: "Bloom Task Sheet F26, team plan",
     title: "Bloom week-by-week task sheet, Terra Labs template, 70 tasks",
     url: "",
-  },
-  espressif: {
-    cite: "Espressif ESP-IDF docs",
-    title: "ESP-IDF Wi-Fi Security guide (WPA2-Enterprise support on ESP32-S3)",
-    url: "https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/api-guides/wifi-security.html",
   },
 } as const;
 
