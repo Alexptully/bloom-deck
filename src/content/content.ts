@@ -22,14 +22,20 @@ export const content = {
   },
 
   problem: {
-    heading: "New students are surrounded by people and still lonely",
-    stat: { value: 60, suffix: "%", label: "of college students under 25 feel lonely sometimes or always" },
-    detail: "After a first conversation, new students underestimate how much the other person liked them",
-    rate: "The hard part is the first hello. Bloom gives everyone in the room a reason to say it.",
+    heading: "Every friendship starts as a seed",
+    stat: { value: 50, suffix: " hours", label: "together before someone you just met becomes a casual friend" },
+    stages: [
+      { hours: 0, label: "First hello", time: "the night you meet" },
+      { hours: 50, label: "Casual friend", time: "about 50 hours" },
+      { hours: 90, label: "Friend", time: "about 90 hours" },
+      { hours: 200, label: "Close friend", time: "200 hours or more" },
+    ],
+    study: "Jeffrey Hall tracked 112 freshmen through their first nine weeks at the University of Kansas",
+    role: "Bloom can't give anyone 200 hours, but it can start the first one. The Garden site makes sure you can find that person again the next day.",
     notes: [
-      "Trellis Strategies surveyed 43,519 students for its Student Financial Wellness Survey: 57 percent of undergraduates feel lonely sometimes or always, and among students under 25 it is 60 percent. Almost a third of students who stopped out said they left because they felt alone or isolated. Loneliness is the normal state on campus, not the exception.",
-      "The reason is not a lack of people to meet. Boothby and colleagues at Yale followed 102 first-year students living in suites and found that after they talked, students consistently underestimated how much their new suitemates liked them. That gap lasted from September until May. New students hold back from the next conversation because they think the first one went worse than it did.",
-      "So the problem Bloom solves is the first step. A club event full of new students is a room of people who each want to meet someone and each assume the others are less interested. The bracelet makes starting a conversation the point of the night, and the light that comes on after both people say their names is visible proof that the other person wanted to meet you too.",
+      "This number comes from Jeffrey Hall at the University of Kansas. He followed 112 incoming freshmen through their first nine weeks and asked how much time they had spent with each new person and how close they felt. It took about 50 hours together to go from acquaintance to casual friend, about 90 to become friends, and more than 200 to become close friends.",
+      "Hall also found that the kind of time mattered. Joking around, catching up and real conversations moved people along faster than time spent side by side in a lecture hall. A demo night full of new students is the right place to start those hours, as long as people actually talk to each other.",
+      "So the job of Bloom in the Magical Forest is the seed, not the whole plant. The bracelet gives guests a reason to walk up to someone and say their name. The Garden site means that person is still findable the next morning, so the first hour can turn into the second.",
     ],
   },
 

@@ -4,15 +4,10 @@ export const sources = {
     title: "Amber Intelligence investor deck, slides 'Your network has a churn problem' and 'Our Product'",
     url: "",
   },
-  trellis: {
-    cite: "Trellis Strategies, Student Financial Wellness Survey, n = 43,519",
-    title: "Invisible on Campus: The Student Loneliness Crisis, research brief, February 2026",
-    url: "https://www.trellisstrategies.org/wp-content/uploads/2026/02/Research-Brief_TSFEB26_Loneliness.pdf",
-  },
-  likingGap: {
-    cite: "Boothby et al., Psychological Science, 2018",
-    title: "The Liking Gap in Conversations: Do People Like Us More Than We Think? (Study 5: 102 first-year suitemates, Sep to May)",
-    url: "https://journals.sagepub.com/doi/10.1177/0956797618783714",
+  hall: {
+    cite: "Hall, Journal of Social and Personal Relationships, 2019",
+    title: "How many hours does it take to make a friend? (Study 2: 112 University of Kansas freshmen, first nine weeks)",
+    url: "https://journals.sagepub.com/doi/10.1177/0265407518761225",
   },
   gardenDeck: {
     cite: "Terra's Garden deck, Team Steve, Sep 2026",

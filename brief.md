@@ -18,8 +18,7 @@ Bloom: a wearable bracelet with a microphone that listens for one thing only, tw
 
 ## Statistics that may appear on slides, with sources
 
-- 60% of college students under 25 feel lonely sometimes or always (57% of all undergraduates, n = 43,519). Source: Trellis Strategies, Student Financial Wellness Survey, research brief "Invisible on Campus", February 2026.
-- After a first conversation, new students underestimate how much the other person liked them (the "liking gap"); among 102 first-year suitemates the gap lasted from September to May. Source: Boothby, Cooney, Sandstrom and Clark, Psychological Science, 2018, Study 5.
+- About 50 hours together turns an acquaintance into a casual friend, about 90 hours into a friend, and more than 200 hours into a close friend (112 University of Kansas freshmen, first nine weeks). Source: Jeffrey A. Hall, "How many hours does it take to make a friend?", Journal of Social and Personal Relationships, 2019 (online 2018).
 - High-density networkers add 20 to 40 new connections a month. Source: Amber deck, 2026.
 - Amber software is live in TestFlight; first wearable prototype targeted December 2026. Source: Amber deck, 2026.
 - Terra's Garden was built in a 5 hour hackathon; 7 connections to full bloom. Source: Terra's Garden deck (Team Steve, Sep 2026) and Alex's account.
