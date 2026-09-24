@@ -3,12 +3,12 @@ import { config } from "./config";
 // Raw inputs. Derived figures are computed below so a teammate changes one number.
 const bomLean = { bracelets: 32, total: 944 };
 const bomMid = { bracelets: 66, total: 2197 };
-// The task sheet plans 564 team hours across weeks 0 to 10 for six people. The pitch asks for five,
-// so each person's weekly hours scale by 6/5 and the average is the same total split five ways.
-const plan = { weeks: 10, tasks: 70, sheetTeamSize: 6, teamSize: 5, teamHours: 564 };
-const sheetHoursPerPerson = [6, 7, 7, 7, 7, 12, 8, 12, 10, 3, 15];
-const hoursPerPerson = sheetHoursPerPerson.map((h) => Math.round((h * plan.sheetTeamSize) / plan.teamSize));
-const averageHours = Math.round(plan.teamHours / plan.teamSize / sheetHoursPerPerson.length);
+// The task sheet planned 564 team hours for six people. The pitch asks for five people at about
+// nine hours each, so the plan is trimmed to about 495 team hours (team estimate): each week below is
+// the task sheet's five-person figure scaled down by about 11 percent.
+const plan = { weeks: 10, tasks: 70, teamSize: 5 };
+const hoursPerPerson = [6, 7, 7, 7, 7, 12, 9, 12, 11, 4, 16];
+const averageHours = Math.round(hoursPerPerson.reduce((a, b) => a + b, 0) / hoursPerPerson.length);
 
 const perBracelet = (tier: { bracelets: number; total: number }) =>
   Math.round(tier.total / tier.bracelets);
@@ -152,7 +152,7 @@ export const content = {
       { label: "Solo work", detail: "The rest on your own schedule" },
     ],
     notes: [
-      "About 15 seconds. It's about ten hours a week each over ten weeks: one team sync, one build block together, the rest on your own. MVP, assembly and demo weeks run heavier.",
+      "About 15 seconds. It's about nine hours a week each over ten weeks: one team sync, one build block together, the rest on your own. MVP, assembly and demo weeks run heavier, 12 to 16 hours.",
     ],
   },
 

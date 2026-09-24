@@ -40,8 +40,8 @@ export const slides: SlideEntry[] = [
   { name: "Terra's Garden", section: "Concept and story", steps: 5, sources: ["gardenDeck"], notes: content.garden.notes, arrival: "fade", Content: GardenSlide },
   { name: "The idea", section: "Concept and story", steps: 3, notes: content.idea.notes, arrival: "settle", accent: "glow", Content: IdeaSlide },
   { name: "In the Magical Forest", section: "Concept and story", steps: 3, printSteps: [1, 3], sources: ["gardenDeck"], notes: content.forest.notes, arrival: "fade", accent: "fireflies", Content: ForestSlide },
-  { name: "Time commitment", section: "Average time commitment per week", steps: 2, sources: ["taskSheet"], arrival: "rise", notes: content.time.notes, Content: TimeSlide },
   { name: "Who we need", section: "Roles needed on the team", steps: 2, sources: ["taskSheet"], arrival: "fade", notes: content.team.notes, Content: TeamSlide },
+  { name: "Time commitment", section: "Average time commitment per week", steps: 2, sources: ["taskSheet"], arrival: "rise", notes: content.time.notes, Content: TimeSlide },
   { name: "Thank you", steps: 1, notes: content.thanks.notes, arrival: "bloom", accent: "glow", Content: ThanksSlide },
   // Backup for questions, after the talk ends. Not presented unless someone asks.
   { name: "How it works", section: "How it works", steps: 5, notes: content.how.notes, arrival: "drift", Content: HowSlide },
