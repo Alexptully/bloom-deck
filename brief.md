@@ -27,7 +27,7 @@ Bloom: a wearable bracelet with a microphone that listens for one thing only, tw
 - XIAO ESP32-S3 $7.49. Source: seeedstudio.com, checked Sep 22 2026.
 - Adafruit 500 mAh LiPo $7.16 at 10 to 99 qty. Source: adafruit.com, checked Sep 22 2026.
 - Deepgram Nova-3 streaming $0.0048 per minute, $200 free credit. Source: deepgram.com/pricing, checked Sep 22 2026.
-- Plan: 10 weeks, 70 tasks, about 8.5 hours per person per week, about 564 team hours for six people. Source: Bloom Task Sheet F26, team plan.
+- Plan: 10 weeks, 70 tasks, about 564 team hours. The task sheet assumed six people at about 8.5 hours each; the pitch now asks for five people, so each person averages about 10 hours a week (weekly hours scaled by 6/5, team estimate). Source: Bloom Task Sheet F26, team plan.
 - ESP32-S3 supports WPA2-Enterprise Wi-Fi. Source: Espressif ESP-IDF docs.
 
 No other numbers go on slides. Anything estimated is labelled "team estimate".

@@ -3,8 +3,12 @@ import { config } from "./config";
 // Raw inputs. Derived figures are computed below so a teammate changes one number.
 const bomLean = { bracelets: 32, total: 944 };
 const bomMid = { bracelets: 66, total: 2197 };
-// teamHours is the summed estimate from the task sheet (six people), not a formula.
-const plan = { weeks: 10, tasks: 70, hoursPerPersonPerWeek: 8.5, teamSize: 6, teamHours: 564 };
+// The task sheet plans 564 team hours across weeks 0 to 10 for six people. The pitch asks for five,
+// so each person's weekly hours scale by 6/5 and the average is the same total split five ways.
+const plan = { weeks: 10, tasks: 70, sheetTeamSize: 6, teamSize: 5, teamHours: 564 };
+const sheetHoursPerPerson = [6, 7, 7, 7, 7, 12, 8, 12, 10, 3, 15];
+const hoursPerPerson = sheetHoursPerPerson.map((h) => Math.round((h * plan.sheetTeamSize) / plan.teamSize));
+const averageHours = Math.round(plan.teamHours / plan.teamSize / sheetHoursPerPerson.length);
 
 const perBracelet = (tier: { bracelets: number; total: number }) =>
   Math.round(tier.total / tier.bracelets);
@@ -29,10 +33,8 @@ export const content = {
     sprouted: 9,
     events: { value: "89%", label: "of 18 to 35 year-olds want events that connect them to their community" },
     notes: [
-      "About 30 seconds. Researchers at the University of Chicago asked commuters to start a conversation with a stranger on the train or bus. Beforehand, people guessed fewer than half of strangers would want to talk.",
-      "Of everyone who reported back, not one was turned down, and the people who talked had a happier ride than the ones who sat quietly.",
-      "And that is what people want from events. In Eventbrite's 2025 survey of about 4,000 people aged 18 to 35, 89 percent said they want events that connect them to their community. Meeting someone new is what makes a night feel like more than a show.",
-      "Bloom gives everyone in the forest a reason to start that first conversation, and it lights both wrists at the same moment, so you know the other person wanted to meet you too.",
+      "About 25 seconds. Researchers asked Chicago commuters to talk to a stranger. They guessed fewer than half would want to, and of everyone who reported back, nobody was turned down. The ones who talked had a happier ride.",
+      "And people want that from events: 89 percent of 18 to 35 year-olds want events that connect them to their community. Bloom gives everyone a reason to start that first conversation.",
     ],
   },
 
@@ -70,9 +72,7 @@ export const content = {
     clearing: { label: "The clearing", detail: "The projected garden, one flower per guest" },
     caption: "From across the room, the lit bracelets drift through the trees like fireflies.",
     notes: [
-      "About 30 seconds. Here is how that fits the room. By the door is the planting station, where guests check in and get a dark bracelet, their seed.",
-      "The rest of the room is the forest floor. Every introduction lights one more LED on two wrists, so from across the room the lit bracelets drift through the trees like fireflies.",
-      "At the far end is the clearing, the projected garden, with one flower per guest that grows every time its owner meets someone.",
+      "About 25 seconds. By the door is the planting station, where guests check in and get a dark bracelet, their seed. Out on the forest floor, every introduction lights one more LED on two wrists, so the bracelets glow like fireflies. At the far end, the clearing on the wall grows one flower per guest.",
     ],
   },
 
@@ -141,27 +141,60 @@ export const content = {
     ],
   },
 
+  time: {
+    heading: `About ${averageHours} hours a week`,
+    weeks: hoursPerPerson,
+    crunch: { 5: "MVP", 7: "Assembly", 10: "Demo day" } as Record<number, string>,
+    average: averageHours,
+    rhythm: [
+      { label: "One team sync", detail: "An hour a week, same time every week" },
+      { label: "One shared build block", detail: "Two to three hours together in the lab" },
+      { label: "Solo work", detail: "The rest on your own schedule" },
+    ],
+    notes: [
+      "About 20 seconds. With five people, each of us averages about ten hours a week: one team sync, one build block together, the rest on your own time.",
+      "The MVP, assembly and demo weeks run heavier, up to about 18 hours in demo week, and Thanksgiving week is light.",
+    ],
+  },
+
+  team: {
+    heading: "Who we need",
+    columns: { owns: "You'd own", helps: "Helpful to have", learn: "You'll learn" },
+    roles: [
+      { role: "PM and systems", owns: "Schedule, integration, the Amber partnership", helps: "Organizing people, any engineering", learn: "Running a hardware build end to end" },
+      { role: "Hardware and firmware", owns: "Circuit, battery, PCB, ESP32 code, LEDs", helps: "Soldering, C, C++ or Arduino", learn: "PCB design, embedded audio, Bluetooth" },
+      { role: "Software", owns: "Server, name matching, Garden site, projected wall", helps: "Python, JavaScript or React", learn: "Speech APIs and live, data-driven visuals" },
+      { role: "Industrial design", owns: "Bracelet body, strap, light diffusion, assembly", helps: "CAD, 3D printing", learn: "Designing a wearable for 60 people" },
+      { role: "Narrative design", owns: "Forest story, planting station, signage", helps: "Storytelling, illustration, set design", learn: "Designing an interactive experience" },
+    ],
+    doubleUp: "Nobody needs every skill. You pick the seat that fits and learn the rest with the team.",
+    notes: [
+      "About 25 seconds. Five seats, each with something clear to own. You don't need to have done it before: the middle column is what helps, and the right column is what you'll walk away knowing.",
+      "The narrative seat is a real role from week one. That person shapes how Bloom lives inside the Magical Forest.",
+    ],
+  },
+
   ask: {
     heading: "What we are asking for",
     asks: [
-      { label: "A team", detail: `5 to 7 people, about ${plan.hoursPerPersonPerWeek} hours a week` },
+      { label: "A team", detail: `${plan.teamSize} people, about ${averageHours} hours a week` },
       { label: "A budget", detail: "Lean $944 or Mid $2,197" },
       { label: "A narrative partner", detail: "To shape the forest's story" },
       { label: "A place in the forest", detail: "The door and one wall" },
     ],
     close: "Let the forest bloom when people meet.",
     notes: [
-      "About 20 seconds. We're looking for five to seven people at about eight hours a week, one of the two budgets, a narrative partner to shape the story, and a spot by the door and a wall for the clearing.",
+      "About 15 seconds. We're asking for five people, one of the two budgets, a narrative partner and a spot in the forest: the door and one wall.",
       "Close: let the forest bloom when people meet.",
     ],
   },
 
   thanks: {
     heading: "Thank you",
-    line: "Questions? Come swap names with me after.",
+    line: "Any questions?",
     byline: `${config.presenter}, ${config.club}`,
     notes: [
-      "About 10 seconds. Thank you. I'd love to answer questions, and if you want to help build this, come find me after and we'll swap names the old-fashioned way.",
+      "About 10 seconds. Thank you. Any questions?",
     ],
   },
 } as const;

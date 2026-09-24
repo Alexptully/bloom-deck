@@ -30,7 +30,7 @@ export const sources = {
     url: "https://www.adafruit.com/product/1578",
   },
   taskSheet: {
-    cite: "Bloom Task Sheet F26, team plan",
+    cite: "Bloom Task Sheet F26, team plan (hours scaled from 6 to 5 people)",
     title: "Bloom week-by-week task sheet, Terra Labs template, 70 tasks",
     url: "",
   },

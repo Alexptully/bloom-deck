@@ -11,14 +11,11 @@ export const config = {
   mvpDate: "Fri Oct 30, 2026",
   // End slide. Leave empty until the Garden site is deployed.
   gardenUrl: "",
-  // Team slide. Replace role placeholders with names once the team is picked.
+  // Team roles. Replace role placeholders with names once the team is picked.
   team: [
     { role: "PM and systems", name: "Alex Tully" },
-    { role: "Hardware and electrical", name: "" },
-    { role: "Firmware", name: "" },
-    { role: "Backend and Amber integration", name: "" },
-    { role: "Web and projection", name: "" },
+    { role: "Hardware and firmware", name: "" },
+    { role: "Software", name: "" },
     { role: "Industrial design", name: "" },
-    { role: "Narrative and visual design", name: "" },
-  ],
-} as const;
+    { role: "Narrative design", name: "" },
+  ],} as const;
