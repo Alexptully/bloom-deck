@@ -24,7 +24,7 @@ export function Deck() {
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
     >
-      <div className="stage" style={{ transform: `scale(${scale})`, transformOrigin: "center" }} aria-live="polite">
+      <div className="stage shrink-0" style={{ transform: `scale(${scale})`, transformOrigin: "center" }} aria-live="polite">
         <AnimatePresence mode="wait">
           <motion.section
             key={pos.slide}
