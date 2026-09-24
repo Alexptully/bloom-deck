@@ -1,12 +1,12 @@
 "use client";
 import { content } from "@/content/content";
-import { Bloom, Frame, Heading, Reveal } from "../primitives";
+import { Frame, Heading, LightRing, Reveal } from "../primitives";
 import { GardenWall, Phone } from "../Phone";
 import type { SlideProps } from "../slides";
 
 const visuals = [
-  () => <Bloom state="seed" size={220} />,
-  () => <Bloom state="bloom" size={220} />,
+  () => <LightRing lit={0} size={240} />,
+  () => <LightRing lit={1} newest size={240} />,
   () => <GardenWall full size={300} />,
   () => <Phone screen="bloom" height={300} />,
 ];

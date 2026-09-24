@@ -110,6 +110,7 @@ export function Bloom(props: BloomProps) {
       width={o.size}
       height={o.size}
       className={props.className}
+      style={{ overflow: "visible" }}
       aria-hidden
       animate={breathAnimation(o.breathe && !m.final)}
       transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
@@ -154,4 +155,66 @@ export function Heading({ children, className = "" }: { children: ReactNode; cla
 /** Standard slide padding; every slide sits inside one. */
 export function Frame({ children, className = "" }: { children: ReactNode; className?: string }) {
   return <div className={`absolute inset-0 px-32 pt-28 pb-40 ${className}`}>{children}</div>;
+}
+
+const RING_LEDS = 8;
+
+function ledPosition(i: number) {
+  const angle = (i / RING_LEDS) * Math.PI * 2 - Math.PI / 2;
+  return { x: 100 + Math.cos(angle) * 72, y: 100 + Math.sin(angle) * 72 };
+}
+
+/**
+ * The bracelet as it really looks: a band with eight LEDs.
+ * Each person you meet lights one more; all eight lit is full bloom.
+ * `lit` counts from the top, clockwise. `newest` pulses the most recent light.
+ */
+export function LightRing({
+  lit,
+  size = 200,
+  muted = false,
+  newest = false,
+  className,
+}: {
+  lit: number;
+  size?: number;
+  muted?: boolean;
+  newest?: boolean;
+  className?: string;
+}) {
+  const final = useFinal();
+  const on = muted ? "var(--color-accent-soft)" : "var(--color-accent)";
+  return (
+    <svg viewBox="0 0 200 200" width={size} height={size} className={className} style={{ overflow: "visible" }} aria-hidden>
+      <circle cx={100} cy={100} r={72} fill="none" stroke="var(--color-ink)" strokeWidth={30} />
+      <circle cx={100} cy={100} r={72} fill="none" stroke="var(--color-ink-muted)" strokeWidth={2} opacity={0.5} />
+      {Array.from({ length: RING_LEDS }, (_, i) => {
+        const { x, y } = ledPosition(i);
+        const isOn = i < lit;
+        const pulse = newest && i === lit - 1 && !final;
+        return (
+          <g key={i}>
+            <motion.circle
+              cx={x}
+              cy={y}
+              initial={false}
+              animate={{ r: isOn ? 20 : 0, opacity: isOn ? 0.55 : 0 }}
+              transition={{ duration: final ? 0 : durations.base, delay: final ? 0 : 0.08 * i, ease }}
+              fill={on}
+              style={{ filter: "blur(6px)" }}
+            />
+            <motion.circle
+              cx={x}
+              cy={y}
+              r={8}
+              initial={false}
+              animate={pulse ? { r: [8, 11, 8] } : { r: 8 }}
+              transition={pulse ? { duration: 1.6, repeat: Infinity, ease: "easeInOut" } : { duration: 0 }}
+              fill={isOn ? on : "var(--color-ink-muted)"}
+            />
+          </g>
+        );
+      })}
+    </svg>
+  );
 }

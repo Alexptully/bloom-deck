@@ -44,7 +44,7 @@ The phone screens in `public/renders/garden-*.png` are crops of the real Terra's
 
 ## Motif
 
-The eight-petal bloom. A closed bud (seed) opens into a flower as the deck progresses, petals accumulate into a garden by the final slide, and the same ring of eight petals is the LED layout on the physical bracelet.
+Eight, drawn two ways. On the wrist, Bloom is a ring of eight LEDs, and each new person you meet lights one more; all eight lit is full bloom. On the Garden site and the projected wall, the same meetings grow a flower from seed to full bloom. Slides about the physical bracelet draw the light ring (`LightRing`); slides about the site, the wall and the story draw the flower (`Bloom`). Never show a flower on the wrist.
 
 ## Tone
 

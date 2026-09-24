@@ -3,6 +3,7 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
 import { useFinal } from "@/lib/final";
 import { ease, durations } from "@/lib/timing";
+import { asset } from "@/lib/asset";
 
 // Screens are 431 by 907 crops of the real Terra's Garden site, taken from the hackathon demo recording.
 export const gardenScreens = {
@@ -30,7 +31,7 @@ export function Phone({ screen, height = 760, className = "" }: { screen: Garden
           exit={{ opacity: 0 }}
           transition={{ duration: final ? 0 : durations.base, ease }}
         >
-          <Image src={shot.src} alt={shot.alt} width={431} height={907} style={{ width, height }} priority />
+          <Image src={asset(shot.src)} alt={shot.alt} width={431} height={907} style={{ width, height }} priority />
         </motion.div>
       </AnimatePresence>
     </div>
@@ -42,14 +43,14 @@ export function GardenWall({ full, size = 420, className = "" }: { full: boolean
   const final = useFinal();
   return (
     <div className={`relative overflow-hidden rounded-card shadow-card ${className}`} style={{ width: size, height: size * 1080 / 1020 }}>
-      <Image src="/renders/garden-empty.jpg" alt="Projected garden clearing with no flowers yet" width={1020} height={1080} style={{ width: "100%", height: "100%" }} />
+      <Image src={asset("/renders/garden-empty.jpg")} alt="Projected garden clearing with no flowers yet" width={1020} height={1080} style={{ width: "100%", height: "100%" }} />
       <motion.div
         className="absolute inset-0"
         initial={final ? false : { opacity: 0 }}
         animate={{ opacity: full ? 1 : 0 }}
         transition={{ duration: final ? 0 : durations.slow, ease }}
       >
-        <Image src="/renders/garden-full.jpg" alt="The same garden clearing filled with flowers after the event" width={1020} height={1080} style={{ width: "100%", height: "100%" }} />
+        <Image src={asset("/renders/garden-full.jpg")} alt="The same garden clearing filled with flowers after the event" width={1020} height={1080} style={{ width: "100%", height: "100%" }} />
       </motion.div>
     </div>
   );

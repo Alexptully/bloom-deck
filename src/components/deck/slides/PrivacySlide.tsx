@@ -1,15 +1,15 @@
 "use client";
 import { content } from "@/content/content";
-import { Bloom, Frame, Heading, Reveal, type BloomState } from "../primitives";
+import { Frame, Heading, LightRing, Reveal } from "../primitives";
 import type { SlideProps } from "../slides";
 
-// One petal state per rule: consent (seed), indicator (breathing sprout), mute (amber sprout), no audio (seed), fallback (bloom)
-const marks: { state: BloomState; petal?: string; muted?: boolean; breathe?: boolean }[] = [
-  { state: "seed" },
-  { state: "sprout", breathe: true },
-  { state: "sprout", petal: "var(--color-accent)" },
-  { state: "seed", muted: true },
-  { state: "bloom" },
+// The bracelet's state for each rule: consent (dark), listening (lights pulse), muted (dim amber), nothing stored (dark), fallback (a light comes on).
+const marks: { lit: number; muted?: boolean; newest?: boolean }[] = [
+  { lit: 0 },
+  { lit: 3, newest: true },
+  { lit: 3, muted: true },
+  { lit: 0 },
+  { lit: 4, newest: true },
 ];
 
 export function PrivacySlide({ step }: SlideProps) {
@@ -20,7 +20,7 @@ export function PrivacySlide({ step }: SlideProps) {
       <ul className="mt-14 flex flex-1 flex-col justify-start gap-3">
         {p.rules.map((r, i) => (
           <Reveal key={r.label} show={step >= i + 1} className="flex items-center gap-10">
-            <Bloom {...marks[i]} size={110} petal={marks[i].petal ?? "var(--color-leaf-soft)"} />
+            <LightRing {...marks[i]} size={110} />
             <div className="flex flex-1 items-baseline gap-8">
               <p className="w-[520px] text-4xl">{r.label}</p>
               <p className="text-2xl text-ink-muted">{r.detail}</p>

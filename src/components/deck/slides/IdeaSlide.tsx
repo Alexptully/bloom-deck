@@ -1,16 +1,19 @@
 "use client";
 import { content } from "@/content/content";
-import { Bloom, Frame, Heading, Reveal } from "../primitives";
+import { Bloom, Frame, Heading, LightRing, Reveal } from "../primitives";
 import type { SlideProps } from "../slides";
 
-function Person({ name, step, flip }: { name: string; step: number; flip?: boolean }) {
+// Each guest arrives having met three people; the introduction lights their fourth.
+function Person({ name, step, delay }: { name: string; step: number; delay: number }) {
   return (
-    <div className={`flex flex-col items-center ${flip ? "" : ""}`}>
-      <Reveal show={step >= 1} delay={flip ? 0.5 : 0.1}>
+    <div className="flex flex-col items-center">
+      <Reveal show={step >= 1} delay={delay}>
         <p className="rounded-card bg-paper-raised px-8 py-4 text-3xl shadow-card">{name}</p>
       </Reveal>
-      <div className="mt-6 h-[220px] w-[220px] rounded-full bg-paper-deep" aria-hidden />
-      <Bloom state={step >= 2 ? "bloom" : "seed"} size={200} className="-mt-16" delay={flip ? 0.25 : 0} />
+      <LightRing lit={step >= 2 ? 4 : 3} newest={step >= 2} size={250} className="mt-4" />
+      <Reveal show={step >= 3} className="-mt-2 flex flex-col items-center">
+        <Bloom state="sprout" size={130} />
+      </Reveal>
     </div>
   );
 }
@@ -30,9 +33,9 @@ export function IdeaSlide({ step }: SlideProps) {
             <p className="text-3xl text-ink-muted">{t.afterward}</p>
           </Reveal>
         </div>
-        <div className="flex flex-1 items-end justify-center gap-24">
-          <Person name="I'm Alex." step={step} />
-          <Person name="I'm Maya." step={step} flip />
+        <div className="flex flex-1 items-start justify-center gap-24">
+          <Person name="I'm Alex." step={step} delay={0.1} />
+          <Person name="I'm Maya." step={step} delay={0.5} />
         </div>
       </div>
     </Frame>

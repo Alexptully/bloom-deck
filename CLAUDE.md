@@ -96,7 +96,7 @@ The deck should look like a design textbook or a designer's portfolio. Take on t
 - Use real imagery: generated images, or models built in Blender or Inkscape. No stock photos and no real company logos. Refer to companies by name in text only.
 - Use animation and interactivity, and check animations frame by frame instead of assuming the CSS is right.
 - Carry detail all the way through: grain, texture, edge treatment and weight.
-- Repeat one motif across the whole deck, the way strong writers and photographers repeat an image. This deck's motif: the eight-petal bloom, a bud that opens as the deck progresses, whose petal ring is also the LED layout on the bracelet.
+- Repeat one motif across the whole deck, the way strong writers and photographers repeat an image. This deck's motif: eight, drawn two ways. The bracelet is a ring of eight LEDs that fills one light per person met (`LightRing`); the Garden site and projected wall draw the same progress as a flower growing from seed to full bloom (`Bloom`). Never draw a flower on the wrist.
 
 ## Writing
 

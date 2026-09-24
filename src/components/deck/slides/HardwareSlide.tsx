@@ -1,6 +1,6 @@
 "use client";
 import { content } from "@/content/content";
-import { Bloom, Frame, Heading, Reveal } from "../primitives";
+import { Frame, Heading, LightRing, Reveal } from "../primitives";
 import type { SlideProps } from "../slides";
 
 const money = (n: number) => `$${n.toLocaleString("en-US")}`;
@@ -25,8 +25,8 @@ export function HardwareSlide({ step }: SlideProps) {
       <Heading>{h.heading}</Heading>
       <div className="mt-10 flex flex-1 gap-20">
         <div className="flex w-[560px] flex-col items-center justify-center">
-          <Bloom state="bloom" size={460} petal="var(--color-accent-soft)" core="var(--color-ink)" />
-          <p className="-mt-6 text-2xl text-ink-muted">Eight LEDs sit under eight petals</p>
+          <LightRing lit={5} newest size={460} />
+          <p className="mt-2 text-center text-2xl text-ink-muted">Five people met, five lights on. Eight is full bloom.</p>
         </div>
         <div className="flex flex-1 flex-col">
           <ul className="grid grid-cols-2 gap-x-12 gap-y-5">

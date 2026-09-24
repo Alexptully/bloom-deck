@@ -1,6 +1,6 @@
 "use client";
 import { content } from "@/content/content";
-import { Bloom, Frame, Heading, Reveal } from "../primitives";
+import { Frame, Heading, LightRing, Reveal } from "../primitives";
 import type { SlideProps } from "../slides";
 
 export function HowSlide({ step }: SlideProps) {
@@ -17,7 +17,7 @@ export function HowSlide({ step }: SlideProps) {
             <Reveal key={n.id} show={shown} className="relative flex w-1/5 flex-col items-start pr-8">
               <div className="flex h-[120px] items-center">
                 {last ? (
-                  <Bloom state={shown ? "bloom" : "seed"} size={120} className="-ml-4" />
+                  <LightRing lit={shown ? 1 : 0} newest={shown} size={120} className="-ml-4" />
                 ) : (
                   <div className={`ml-5 h-8 w-8 rounded-full ${shown ? "bg-leaf" : "bg-paper-deep"}`} />
                 )}
