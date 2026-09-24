@@ -4,6 +4,7 @@ import { content } from "@/content/content";
 import { TitleSlide } from "./slides/TitleSlide";
 import { ProblemSlide } from "./slides/ProblemSlide";
 import { GardenSlide } from "./slides/GardenSlide";
+import { IdeaSlide } from "./slides/IdeaSlide";
 import { ForestSlide } from "./slides/ForestSlide";
 import { HowSlide } from "./slides/HowSlide";
 import { PrivacySlide } from "./slides/PrivacySlide";
@@ -27,8 +28,9 @@ export type SlideEntry = {
 
 export const slides: SlideEntry[] = [
   { name: "Title", steps: 3, printSteps: [3], notes: content.title.notes, Content: TitleSlide },
-  { name: "The problem", section: "Concept and story", steps: 2, sources: ["hall"], notes: content.problem.notes, Content: ProblemSlide },
+  { name: "The problem", section: "Concept and story", steps: 3, sources: ["likingGap"], notes: content.problem.notes, Content: ProblemSlide },
   { name: "Terra's Garden", section: "Concept and story", steps: 5, sources: ["gardenDeck"], notes: content.garden.notes, Content: GardenSlide },
+  { name: "The idea", section: "Concept and story", steps: 3, notes: content.idea.notes, Content: IdeaSlide },
   { name: "In the Magical Forest", section: "Concept and story", steps: 3, printSteps: [1, 3], sources: ["gardenDeck"], notes: content.forest.notes, Content: ForestSlide },
   { name: "How it works", section: "How it works", steps: 5, notes: content.how.notes, Content: HowSlide },
   { name: "Privacy", section: "Risks and privacy", steps: 5, notes: content.privacy.notes, Content: PrivacySlide },

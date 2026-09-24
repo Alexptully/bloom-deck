@@ -21,40 +21,62 @@ export const content = {
   },
 
   problem: {
-    heading: "Every friendship starts as a seed",
-    stat: { value: 50, suffix: " hours", label: "to turn someone new into a casual friend" },
-    stages: [
-      { hours: 0, label: "First hello", time: "day one" },
-      { hours: 50, label: "Casual friend", time: "50 hours" },
-      { hours: 90, label: "Friend", time: "90 hours" },
-      { hours: 200, label: "Close friend", time: "200+ hours" },
+    heading: "They liked you more than you thought",
+    stat: { value: 5, suffix: " months", label: "that first-years kept underestimating how much a new roommate liked them after they first met" },
+    months: [
+      { month: 0, label: "Sep", plant: "seed" },
+      { month: 1, label: "Oct", plant: "sprout" },
+      { month: 3, label: "Dec", plant: "leafy" },
+      { month: 5, label: "Feb", plant: "bud" },
+      { month: 8, label: "May", plant: "bloom" },
     ],
+    gap: "Still underestimating",
+    closed: "Caught up",
+    mutual: "Bloom lights both wrists at once, so you know it was mutual.",
     notes: [
-      "About 30 seconds. A University of Kansas study followed 112 freshmen through their first nine weeks. It took about 50 hours together to turn someone new into a casual friend, and more than 200 to become close friends.",
-      "We can't give anyone 200 hours. We can start the first one, and make sure you can find that person again the next day.",
+      "About 30 seconds. Researchers at Yale call this the liking gap. After people meet for the first time, they consistently think the other person liked them less than they really did.",
+      "They followed 102 first-years living in suites. In September, October, December and February, students still underestimated how much their new suitemates liked them. Only by May had the gap closed.",
+      "That gap is why people don't go back for a second conversation. Bloom lights both wrists at the same moment, so you know right away that the other person wanted to meet you too.",
     ],
   },
 
   garden: {
     heading: "Terra's Garden worked, except for one step",
     built: "Built in a 5 hour hackathon",
-    steps: ["Check in", "Tap bracelets", "Grow", "Garden"],
-    broken: "Tapping meant pulling out a phone",
+    steps: [
+      { label: "Check in", detail: "Guest creates a profile and is planted as a seed" },
+      { label: "Meet someone", detail: "They tap your bracelet's NFC tag with their phone" },
+      { label: "Grow", detail: "Your bracelet glows brighter; 7 connections reach full bloom" },
+      { label: "Garden", detail: "Every flower joins a projected communal garden" },
+    ],
+    broken: "Pulling out a phone breaks the moment",
     notes: [
-      "About 25 seconds. At the hackathon we built Terra's Garden. You check in, tap someone's bracelet, and your flower grows on a projected garden.",
-      "It worked, except for one step. Tapping meant pulling out your phone, and the moment you look down, the conversation is over.",
+      "About 30 seconds. At the hackathon we built Terra's Garden in five hours. You check in and get planted as a seed, someone taps your bracelet with their phone, your bracelet glows brighter, and your flower joins a projected garden.",
+      "It worked, except for one step. Tapping meant pulling out a phone, and the moment you both look down, the conversation is over.",
+    ],
+  },
+
+  idea: {
+    heading: "The forest listens for one thing",
+    line1: "Two people tell each other their names.",
+    line2: "Only then does one more light come on, on both wrists.",
+    afterward: "On the Garden site your flower grows, and everyone you met is saved for the next morning.",
+    notes: [
+      "About 25 seconds. So for the Magical Forest, the forest does the noticing. It listens for one thing: two people telling each other their names.",
+      "Only then does one more light come on, on both wrists at the same time. On the Garden site your flower grows, and everyone you met is saved for the next morning.",
     ],
   },
 
   forest: {
-    heading: "The forest listens for one thing",
-    entrance: "Get a dark bracelet",
-    wander: "Swap names, both light up",
-    clearing: "Your flower grows on the wall",
+    heading: "Bloom in the Magical Forest",
+    entrance: { label: "The planting station", detail: "Guests check in and are given a dark bracelet, a seed" },
+    wander: { label: "The forest floor", detail: "Every introduction lights one more LED on two wrists" },
+    clearing: { label: "The clearing", detail: "The projected garden, one flower per guest" },
+    caption: "From across the room, the lit bracelets drift through the trees like fireflies.",
     notes: [
-      "About 35 seconds. So in the Magical Forest, the forest does the noticing. At the planting station by the door you get a bracelet with eight dark lights.",
-      "Out on the forest floor, when you and someone tell each other your names, one light comes on at each wrist. From across the room the bracelets look like fireflies.",
-      "At the far end, the clearing on the wall grows a flower for every guest. The next morning, everyone you met is waiting on the Garden site.",
+      "About 30 seconds. Here is how that fits the room. By the door is the planting station, where guests check in and get a dark bracelet, their seed.",
+      "The rest of the room is the forest floor. Every introduction lights one more LED on two wrists, so from across the room the lit bracelets drift through the trees like fireflies.",
+      "At the far end is the clearing, the projected garden, with one flower per guest that grows every time its owner meets someone.",
     ],
   },
 

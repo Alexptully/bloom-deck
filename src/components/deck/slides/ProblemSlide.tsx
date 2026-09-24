@@ -1,6 +1,6 @@
 "use client";
 import { content } from "@/content/content";
-import { CountUp, Frame, Heading } from "../primitives";
+import { CountUp, Frame, Heading, Reveal } from "../primitives";
 import { GrowthPlate } from "../GrowthPlate";
 import type { SlideProps } from "../slides";
 
@@ -15,8 +15,11 @@ export function ProblemSlide({ step }: SlideProps) {
             <CountUp to={p.stat.value} suffix={p.stat.suffix} show={step >= 1} />
           </p>
           <p className="mt-4 text-3xl leading-snug">{p.stat.label}</p>
+          <Reveal show={step >= 3} delay={0.1}>
+            <p className="mt-10 text-3xl leading-snug text-leaf">{p.mutual}</p>
+          </Reveal>
         </div>
-        <GrowthPlate stages={p.stages} grown={step >= 2} />
+        <GrowthPlate surveys={p.months} gap={p.gap} closed={p.closed} grown={step >= 2} />
       </div>
     </Frame>
   );

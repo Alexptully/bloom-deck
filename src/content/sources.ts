@@ -1,8 +1,8 @@
 export const sources = {
-  hall: {
-    cite: "Hall, Journal of Social and Personal Relationships, 2019",
-    title: "How many hours does it take to make a friend? (Study 2: 112 University of Kansas freshmen, first nine weeks)",
-    url: "https://journals.sagepub.com/doi/10.1177/0265407518761225",
+  likingGap: {
+    cite: "Boothby et al., Psychological Science, 2018",
+    title: "The Liking Gap in Conversations: Do People Like Us More Than We Think? (Study 5: 102 Yale first-year suitemates, surveyed Sep, Oct, Dec, Feb and May)",
+    url: "https://journals.sagepub.com/doi/10.1177/0956797618783714",
   },
   gardenDeck: {
     cite: "Terra's Garden deck, Team Steve, Sep 2026",

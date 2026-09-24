@@ -18,7 +18,7 @@ Bloom: a wearable bracelet with a microphone that listens for one thing only, tw
 
 ## Statistics that may appear on slides, with sources
 
-- About 50 hours together turns an acquaintance into a casual friend, about 90 hours into a friend, and more than 200 hours into a close friend (112 University of Kansas freshmen, first nine weeks). Source: Jeffrey A. Hall, "How many hours does it take to make a friend?", Journal of Social and Personal Relationships, 2019 (online 2018).
+- The liking gap: after a first conversation, people underestimate how much the other person liked them. Among 102 Yale first-year suitemates the gap was present in September, October, December and February (about 5 months) and gone by May. Source: Boothby, Cooney, Sandstrom and Clark, "The Liking Gap in Conversations", Psychological Science, 2018, Study 5.
 - High-density networkers add 20 to 40 new connections a month. Source: Amber deck, 2026.
 - Amber software is live in TestFlight; first wearable prototype targeted December 2026. Source: Amber deck, 2026.
 - Terra's Garden was built in a 5 hour hackathon; 7 connections to full bloom. Source: Terra's Garden deck (Team Steve, Sep 2026) and Alex's account.

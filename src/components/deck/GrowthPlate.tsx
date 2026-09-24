@@ -1,14 +1,16 @@
 "use client";
+import type React from "react";
 import { motion } from "motion/react";
 import { useFinal } from "@/lib/final";
 import { ease, durations } from "@/lib/timing";
 
-// A botanical-plate drawing of Hall's friendship thresholds. Plants sit on a real hour scale:
-// x = 90 + hours * 4.4, so 0 h, 50 h, 90 h and 200 h land where the data says they should.
-const GROUND = 470;
-const hourX = (hours: number) => 90 + hours * 4.4;
+// A botanical-plate drawing of the liking gap study (Boothby et al. 2018, Study 5). Plants sit on a
+// month scale from September (0) to May (8) at the five times the suitemates were surveyed.
+const GROUND = 430;
+const monthX = (month: number) => 110 + month * 108;
 
-export type Stage = { hours: number; label: string; time: string };
+export type Plant = "seed" | "sprout" | "leafy" | "bud" | "bloom";
+export type Survey = { month: number; label: string; plant: Plant };
 
 const ink = "var(--color-ink)";
 const leafFill = "var(--color-leaf-soft)";
@@ -72,77 +74,110 @@ function Flower({ x, y, show, delay }: { x: number; y: number; show: boolean; de
   );
 }
 
-function Sprout({ show }: { show: boolean }) {
-  const x = hourX(50);
+function Sprout({ x, show }: { x: number; show: boolean }) {
   return (
     <g>
-      <Stem x={x} height={80} show={show} delay={0.1} />
-      <Leaf x={x - 3} y={GROUND - 72} flip={false} show={show} delay={0.5} />
-      <Leaf x={x - 3} y={GROUND - 72} flip show={show} delay={0.55} />
+      <Stem x={x} height={70} show={show} delay={0.1} />
+      <Leaf x={x - 3} y={GROUND - 62} flip={false} show={show} delay={0.4} />
+      <Leaf x={x - 3} y={GROUND - 62} flip show={show} delay={0.45} />
     </g>
   );
 }
 
-function Budding({ show }: { show: boolean }) {
-  const x = hourX(90);
+function Leafy({ x, show }: { x: number; show: boolean }) {
   return (
     <g>
-      <Stem x={x} height={180} show={show} delay={0.3} />
+      <Stem x={x} height={130} show={show} delay={0.2} />
+      <Leaf x={x - 2} y={GROUND - 60} flip show={show} delay={0.5} />
+      <Leaf x={x + 3} y={GROUND - 100} flip={false} show={show} delay={0.6} />
+      <Leaf x={x + 2} y={GROUND - 128} flip show={show} delay={0.7} />
+    </g>
+  );
+}
+
+function Budding({ x, show }: { x: number; show: boolean }) {
+  return (
+    <g>
+      <Stem x={x} height={190} show={show} delay={0.3} />
       <Leaf x={x - 2} y={GROUND - 70} flip show={show} delay={0.7} />
-      <Leaf x={x + 4} y={GROUND - 120} flip={false} show={show} delay={0.8} />
-      <Bud x={x + 2} y={GROUND - 178} show={show} delay={1.0} />
+      <Leaf x={x + 4} y={GROUND - 125} flip={false} show={show} delay={0.8} />
+      <Bud x={x + 2} y={GROUND - 188} show={show} delay={1.0} />
     </g>
   );
 }
 
-function FullBloom({ show }: { show: boolean }) {
-  const x = hourX(200);
+function FullBloom({ x, show }: { x: number; show: boolean }) {
   return (
     <g>
-      <Stem x={x} height={290} show={show} delay={0.5} />
+      <Stem x={x} height={280} show={show} delay={0.5} />
       <Leaf x={x - 3} y={GROUND - 80} flip show={show} delay={0.9} />
       <Leaf x={x + 4} y={GROUND - 150} flip={false} show={show} delay={1.0} />
-      <Leaf x={x + 2} y={GROUND - 215} flip show={show} delay={1.1} />
-      <Flower x={x + 2} y={GROUND - 330} show={show} delay={1.3} />
+      <Leaf x={x + 2} y={GROUND - 210} flip show={show} delay={1.1} />
+      <Flower x={x + 2} y={GROUND - 320} show={show} delay={1.3} />
     </g>
   );
 }
+
+const plants: Record<Plant, (props: { x: number; show: boolean }) => React.ReactElement> = {
+  seed: Seed,
+  sprout: Sprout,
+  leafy: Leafy,
+  bud: Budding,
+  bloom: FullBloom,
+};
 
 function Ground() {
   return (
     <g>
       <path d={`M 40 ${GROUND} C 300 ${GROUND - 4}, 600 ${GROUND + 5}, 1040 ${GROUND - 2}`} fill="none" stroke={ink} strokeWidth={2} strokeLinecap="round" />
       {Array.from({ length: 42 }, (_, i) => (
-        <circle key={i} cx={50 + ((i * 97) % 990)} cy={GROUND + 12 + ((i * 53) % 40)} r={1.6 + (i % 3) * 0.6} fill="var(--color-ink-muted)" opacity={0.45} />
+        <circle key={i} cx={50 + ((i * 97) % 990)} cy={GROUND + 10 + ((i * 53) % 30)} r={1.6 + (i % 3) * 0.6} fill="var(--color-ink-muted)" opacity={0.45} />
       ))}
     </g>
   );
 }
 
-function Label({ stage, show }: { stage: Stage; show: boolean }) {
+function Fade({ show, children }: { show: boolean; children: React.ReactNode }) {
   const final = useFinal();
-  const x = hourX(stage.hours);
   return (
     <motion.g initial={false} animate={{ opacity: show || final ? 1 : 0 }} transition={{ duration: final ? 0 : durations.base, ease }}>
-      <line x1={x} y1={GROUND + 58} x2={x} y2={GROUND + 72} stroke={ink} strokeWidth={1.2} />
-      <text x={x} y={GROUND + 104} textAnchor="middle" className="fill-ink text-2xl">{stage.label}</text>
-      <text x={x} y={GROUND + 138} textAnchor="middle" className="fill-ink-muted text-xl">{stage.time}</text>
+      {children}
     </motion.g>
   );
 }
 
-/** Seed, sprout, bud and bloom placed on an hours scale. The seed shows first; the rest grow at `grown`. */
-export function GrowthPlate({ stages, grown }: { stages: readonly Stage[]; grown: boolean }) {
+/** The bracket under the months where the gap was measured, and the note where it closed. */
+function GapBracket({ from, to, closedAt, gap, closed, show }: { from: number; to: number; closedAt: number; gap: string; closed: string; show: boolean }) {
+  const y = GROUND + 110;
   return (
-    <svg viewBox="0 0 1080 640" width={1080} height={640} role="img" aria-label="Botanical drawing on an hours scale: a seed at the first conversation, a sprout at about 50 hours for a casual friend, a bud at about 90 hours for a friend, and a flower in full bloom past 200 hours for a close friend">
+    <Fade show={show}>
+      <path d={`M ${monthX(from)} ${y - 12} V ${y} H ${monthX(to)} V ${y - 12}`} fill="none" stroke="var(--color-accent)" strokeWidth={3} strokeLinecap="round" />
+      <text x={(monthX(from) + monthX(to)) / 2} y={y + 42} textAnchor="middle" className="fill-ink text-2xl">{gap}</text>
+      <text x={monthX(closedAt)} y={y + 42} textAnchor="middle" className="fill-leaf text-2xl">{closed}</text>
+    </Fade>
+  );
+}
+
+/** Five survey months drawn as one plant growing. The seed shows first; the rest grow at `grown`. */
+export function GrowthPlate({ surveys, gap, closed, grown }: { surveys: readonly Survey[]; gap: string; closed: string; grown: boolean }) {
+  const gapped = surveys.slice(0, -1);
+  const last = surveys[surveys.length - 1];
+  return (
+    <svg viewBox="0 0 1080 640" width={1080} height={640} role="img" aria-label="A plant drawn growing from a seed in September to a flower in May. Under September to February, a bracket reads still underestimating; at May the gap has closed">
       <Ground />
-      <Seed x={hourX(0)} show />
-      <Sprout show={grown} />
-      <Budding show={grown} />
-      <FullBloom show={grown} />
-      {stages.map((stage, i) => (
-        <Label key={stage.label} stage={stage} show={i === 0 || grown} />
-      ))}
+      {surveys.map((s, i) => {
+        const Draw = plants[s.plant];
+        const show = i === 0 || grown;
+        return (
+          <g key={s.label}>
+            <Draw x={monthX(s.month)} show={show} />
+            <Fade show={show}>
+              <text x={monthX(s.month)} y={GROUND + 70} textAnchor="middle" className="fill-ink-muted text-2xl">{s.label}</text>
+            </Fade>
+          </g>
+        );
+      })}
+      <GapBracket from={gapped[0].month} to={gapped[gapped.length - 1].month} closedAt={last.month} gap={gap} closed={closed} show={grown} />
     </svg>
   );
 }
