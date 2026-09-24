@@ -18,7 +18,8 @@ Bloom: a wearable bracelet with a microphone that listens for one thing only, tw
 
 ## Statistics that may appear on slides, with sources
 
-- 80% of new professional contacts go dormant, context lost within 48 hours. Source: Amber Intelligence deck, 2026 (slide "Your network has a churn problem").
+- 60% of college students under 25 feel lonely sometimes or always (57% of all undergraduates, n = 43,519). Source: Trellis Strategies, Student Financial Wellness Survey, research brief "Invisible on Campus", February 2026.
+- After a first conversation, new students underestimate how much the other person liked them (the "liking gap"); among 102 first-year suitemates the gap lasted from September to May. Source: Boothby, Cooney, Sandstrom and Clark, Psychological Science, 2018, Study 5.
 - High-density networkers add 20 to 40 new connections a month. Source: Amber deck, 2026.
 - Amber software is live in TestFlight; first wearable prototype targeted December 2026. Source: Amber deck, 2026.
 - Terra's Garden was built in a 5 hour hackathon; 7 connections to full bloom. Source: Terra's Garden deck (Team Steve, Sep 2026) and Alex's account.

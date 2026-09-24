@@ -22,13 +22,14 @@ export const content = {
   },
 
   problem: {
-    heading: "You meet more people than you can keep",
-    stat: { value: 80, suffix: "%", label: "of new professional contacts go dormant" },
-    detail: "The context that made them valuable is lost within 48 hours",
-    rate: "20 to 40 new connections a month for students, founders and community builders",
+    heading: "New students are surrounded by people and still lonely",
+    stat: { value: 60, suffix: "%", label: "of college students under 25 feel lonely sometimes or always" },
+    detail: "After a first conversation, new students underestimate how much the other person liked them",
+    rate: "The hard part is the first hello. Bloom gives everyone in the room a reason to say it.",
     notes: [
-      "The Amber team measured this for their own product: four out of five new contacts go quiet, and the details that made them worth knowing are gone within two days. A club demo night is exactly this problem in miniature. You meet thirty people and remember four.",
-      "The fix most people reach for is a phone: a LinkedIn scan, a contact card, a note. The phone is the thing that ends the conversation, and in a room dressed as a magical forest it also breaks the spell the set is trying to cast.",
+      "Trellis Strategies surveyed 43,519 students for its Student Financial Wellness Survey: 57 percent of undergraduates feel lonely sometimes or always, and among students under 25 it is 60 percent. Almost a third of students who stopped out said they left because they felt alone or isolated. Loneliness is the normal state on campus, not the exception.",
+      "The reason is not a lack of people to meet. Boothby and colleagues at Yale followed 102 first-year students living in suites and found that after they talked, students consistently underestimated how much their new suitemates liked them. That gap lasted from September until May. New students hold back from the next conversation because they think the first one went worse than it did.",
+      "So the problem Bloom solves is the first step. A club event full of new students is a room of people who each want to meet someone and each assume the others are less interested. The bracelet makes starting a conversation the point of the night, and the light that comes on after both people say their names is visible proof that the other person wanted to meet you too.",
     ],
   },
 
