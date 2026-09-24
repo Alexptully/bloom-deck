@@ -21,22 +21,18 @@ export const content = {
   },
 
   problem: {
-    heading: "They liked you more than you thought",
-    stat: { value: 5, suffix: " months", label: "that first-years kept underestimating how much a new roommate liked them after they first met" },
-    months: [
-      { month: 0, label: "Sep", plant: "seed" },
-      { month: 1, label: "Oct", plant: "sprout" },
-      { month: 3, label: "Dec", plant: "leafy" },
-      { month: 5, label: "Feb", plant: "bud" },
-      { month: 8, label: "May", plant: "bloom" },
-    ],
-    gap: "Still underestimating",
-    closed: "Caught up",
-    mutual: "Bloom lights both wrists at once, so you know it was mutual.",
+    heading: "Nobody said no",
+    stat: { value: "0", label: "strangers turned them down" },
+    detail: "Commuters guessed fewer than half would want to talk. Every one did.",
+    guessRow: { title: "What they guessed", detail: "Under half would want to talk" },
+    actualRow: { title: "What happened", detail: "Every stranger talked back" },
+    sprouted: 9,
+    events: { value: "89%", label: "of 18 to 35 year-olds want events that connect them to their community" },
     notes: [
-      "About 30 seconds. Researchers at Yale call this the liking gap. After people meet for the first time, they consistently think the other person liked them less than they really did.",
-      "They followed 102 first-years living in suites. In September, October, December and February, students still underestimated how much their new suitemates liked them. Only by May had the gap closed.",
-      "That gap is why people don't go back for a second conversation. Bloom lights both wrists at the same moment, so you know right away that the other person wanted to meet you too.",
+      "About 30 seconds. Researchers at the University of Chicago asked commuters to start a conversation with a stranger on the train or bus. Beforehand, people guessed fewer than half of strangers would want to talk.",
+      "Of everyone who reported back, not one was turned down, and the people who talked had a happier ride than the ones who sat quietly.",
+      "And that is what people want from events. In Eventbrite's 2025 survey of about 4,000 people aged 18 to 35, 89 percent said they want events that connect them to their community. Meeting someone new is what makes a night feel like more than a show.",
+      "Bloom gives everyone in the forest a reason to start that first conversation, and it lights both wrists at the same moment, so you know the other person wanted to meet you too.",
     ],
   },
 

@@ -1,8 +1,13 @@
 export const sources = {
-  likingGap: {
-    cite: "Boothby et al., Psychological Science, 2018",
-    title: "The Liking Gap in Conversations: Do People Like Us More Than We Think? (Study 5: 102 Yale first-year suitemates, surveyed Sep, Oct, Dec, Feb and May)",
-    url: "https://journals.sagepub.com/doi/10.1177/0956797618783714",
+  epley: {
+    cite: "Epley and Schroeder, J. Experimental Psychology, 2014",
+    title: "Mistakenly Seeking Solitude (Experiments 3a and 3b: commuters predicted fewer than 47% and 45% of strangers would talk; no participant reported being rebuffed)",
+    url: "https://faculty.haas.berkeley.edu/jschroeder/Publications/Epley&Schroeder2014.pdf",
+  },
+  eventbrite: {
+    cite: "Eventbrite Social Study, 2026",
+    title: "Eventbrite Social Study report, 'Reset to Real': dcdx survey of 4,051 people aged 18 to 35, US and UK, July 2025",
+    url: "https://www.businesswire.com/news/home/20260114088488/en/Eventbrites-Inaugural-Social-Study-Report-Reveals-the-Reset-to-Real-How-Gen-Z-and-Millennials-Are-Redefining-Live-Experiences-in-2026",
   },
   gardenDeck: {
     cite: "Terra's Garden deck, Team Steve, Sep 2026",

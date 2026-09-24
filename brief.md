@@ -18,7 +18,8 @@ Bloom: a wearable bracelet with a microphone that listens for one thing only, tw
 
 ## Statistics that may appear on slides, with sources
 
-- The liking gap: after a first conversation, people underestimate how much the other person liked them. Among 102 Yale first-year suitemates the gap was present in September, October, December and February (about 5 months) and gone by May. Source: Boothby, Cooney, Sandstrom and Clark, "The Liking Gap in Conversations", Psychological Science, 2018, Study 5.
+- Commuters predicted fewer than half (under 47% on trains, under 45% on buses) of strangers would be willing to talk; of those who reported back, everyone had a conversation and no one was rebuffed. Source: Epley and Schroeder, "Mistakenly Seeking Solitude", Journal of Experimental Psychology: General, 2014, Experiments 3a and 3b.
+- 89% of 18 to 35 year-olds want events that connect them to their community. Source: Eventbrite Social Study 2026 (dcdx survey of 4,051 people aged 18 to 35 in the US and UK, July 11 to 16, 2025).
 - High-density networkers add 20 to 40 new connections a month. Source: Amber deck, 2026.
 - Amber software is live in TestFlight; first wearable prototype targeted December 2026. Source: Amber deck, 2026.
 - Terra's Garden was built in a 5 hour hackathon; 7 connections to full bloom. Source: Terra's Garden deck (Team Steve, Sep 2026) and Alex's account.
