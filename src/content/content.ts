@@ -155,4 +155,13 @@ export const content = {
       "Close: let the forest bloom when people meet.",
     ],
   },
+
+  thanks: {
+    heading: "Thank you",
+    line: "Questions? Come swap names with me after.",
+    byline: `${config.presenter}, ${config.club}`,
+    notes: [
+      "About 10 seconds. Thank you. I'd love to answer questions, and if you want to help build this, come find me after and we'll swap names the old-fashioned way.",
+    ],
+  },
 } as const;

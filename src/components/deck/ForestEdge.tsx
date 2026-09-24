@@ -48,8 +48,9 @@ export function ForestEdge({ growth }: { growth: number }) {
           <motion.g
             key={i}
             initial={false}
-            animate={{ opacity: t.order < shown ? 0.1 : 0, y: t.order < shown ? 0 : 30 }}
-            transition={{ duration: final ? 0 : durations.slow, ease }}
+            style={{ transformBox: "fill-box", transformOrigin: "50% 100%" }}
+            animate={{ opacity: t.order < shown ? 0.1 : 0, scaleY: t.order < shown ? 1 : 0.2 }}
+            transition={{ duration: final ? 0 : durations.slow * 1.4, delay: final ? 0 : 0.4 + (t.order % 6) * 0.08, ease }}
           >
             {t.kind === "pine" ? <Pine x={t.x} h={t.h} /> : <Round x={t.x} h={t.h} />}
           </motion.g>

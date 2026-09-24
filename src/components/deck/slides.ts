@@ -5,6 +5,7 @@ import { TitleSlide } from "./slides/TitleSlide";
 import { ProblemSlide } from "./slides/ProblemSlide";
 import { GardenSlide } from "./slides/GardenSlide";
 import { IdeaSlide } from "./slides/IdeaSlide";
+import { ThanksSlide } from "./slides/ThanksSlide";
 import { ForestSlide } from "./slides/ForestSlide";
 import { HowSlide } from "./slides/HowSlide";
 import { PrivacySlide } from "./slides/PrivacySlide";
@@ -37,5 +38,6 @@ export const slides: SlideEntry[] = [
   { name: "Hardware and BOM", section: "Bill of materials", steps: 2, sourcesByStep: { 1: ["seeed", "adafruit"], 2: ["bom", "seeed", "adafruit"] }, notes: content.hardware.notes, Content: HardwareSlide },
   { name: "Timeline", section: "Week-by-week timeline", steps: 4, sources: ["taskSheet"], notes: content.timeline.notes, Content: TimelineSlide },
   { name: "The ask", section: "Roles and time commitment", steps: 5, sources: ["bom", "taskSheet"], notes: content.ask.notes, Content: AskSlide },
+  { name: "Thank you", steps: 1, notes: content.thanks.notes, Content: ThanksSlide },
   { name: "Sources", steps: 1, notes: ["Every number in the deck traces to one of these."], Content: SourcesSlide },
 ];

@@ -30,6 +30,8 @@ npm run dev
 | F | Full screen |
 | P | Open the print version |
 
+Moving between slides plays a short sweep of fireflies and leaves in the direction you are going, and the treeline along the bottom grows as the talk goes on. Build steps within a slide stay quick so you are never waiting on an animation.
+
 The address bar follows the slide (`/#5` is slide 5), so you can reload straight into one section to rehearse it.
 
 ## Export a PDF

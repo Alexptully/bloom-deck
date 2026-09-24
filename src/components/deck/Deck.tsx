@@ -7,7 +7,8 @@ import { SlideFooter } from "./SlideFooter";
 import { NotesPanel } from "./NotesPanel";
 import { Grain } from "./Grain";
 import { ForestEdge } from "./ForestEdge";
-import { ease, durations } from "@/lib/timing";
+import { TransitionSweep, slideVariants } from "./Transition";
+import { useSlideDirection } from "./useSlideDirection";
 
 const stepCounts = slides.map((s) => s.steps);
 
@@ -17,6 +18,7 @@ export function Deck() {
   const scale = useStageScale();
   const slide = slides[pos.slide];
   const Content = slide.Content;
+  const { dir, moved } = useSlideDirection(pos.slide);
 
   return (
     <main
@@ -27,20 +29,22 @@ export function Deck() {
     >
       <div className="stage shrink-0" style={{ transform: `scale(${scale})`, transformOrigin: "center" }} aria-live="polite">
         <ForestEdge growth={pos.slide / (slides.length - 1)} />
-        <AnimatePresence mode="wait">
+        <AnimatePresence initial={false} custom={dir}>
           <motion.section
             key={pos.slide}
             className="absolute inset-0"
             aria-label={slide.name}
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -24 }}
-            transition={{ duration: durations.fast, ease }}
+            custom={dir}
+            variants={slideVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
           >
             <Content step={pos.step} />
             <SlideFooter section={slide.section} sourceKeys={slide.sourcesByStep?.[pos.step] ?? slide.sources} />
           </motion.section>
         </AnimatePresence>
+        {moved ? <TransitionSweep key={pos.slide} dir={dir} /> : null}
         <Grain />
       </div>
       <NotesPanel open={notesOpen} title={slide.name} notes={slide.notes} position={pos} />
